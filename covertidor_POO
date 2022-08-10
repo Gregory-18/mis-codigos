@@ -1,0 +1,98 @@
+class Longitud:
+    def __init__(self, n1) -> None:
+        self.n1 = float(n1)
+    
+    def pulgadas(self):
+        pulgada = self.n1 * 0.39 # Pulgadas
+        print(f'La convercion de {n1}cm es: {round(pulgada, 2)} pulgadas')
+
+    def yardas(self):
+        yarda = self.n1 * 0.0109#Yardas
+        print(f'La convercion de {n1}cm es: {round(yarda, 2)} yardas')
+    
+    def pies(self):
+        pie = self.n1 * 0.0328#Pies
+        print(f'La convercion de {n1}cm es: {round(pie, 2)} pies')
+    
+    def metros(self):
+        metro = self.n1 * 0.01#Metros
+        print(f'La convercion de {n1}cm es: {round(metro, 2)} metros',)
+
+
+class Velocidad:
+    def __init__(self, n1):
+        self.n1 = float(n1)
+    def millas(self):
+        milla = self.n1 * 0.621371 #millas
+        print(f'La convercion de {n1}km es: {round(milla, 0)} millas')
+    
+    def metros(self):
+        metro = self.n1 * 0.277778 #metros
+        print(f'La convercion de {n1}km es: {round(metro, 0)} metros')
+        
+    def nudos(self):
+        nudo = self.n1 * 0.539957 #nudos
+        print(f'La convercion de {n1}km es: {round(nudo, 0)} nudos')
+    
+    def pies(self):
+        pie = self.n1 * 0.911344 #pies
+        print(f'La convercion de {n1}km es: {round(pie, 0)} pies')
+
+class Peso:
+    def __init__(self, n1):
+        self.n1 = float(n1)
+    
+    def libras(self):
+        libra = self.n1 * 2.2046 #libras
+        print(f'La convercion de {n1}kg es: {round(libra, 1)} libras')
+    
+    def onzas(self):
+        onza = self.n1 * 35.2739 #Onzas
+        print(f'La convercion de {n1}kg es: {round(onza, 1)} onzas')
+    
+    def toneladas(self):
+        tonelada = self.n1 * 0.001 #Toneladas
+        print(f'La convercion de {n1}kg es: {round(tonelada, 3)} toneladas')
+
+opcion = 0
+
+while True:
+    print("""
+    Dime, ¿Qué conversión quieres hacer?
+
+    1) Entrar a la conversión de Longitud
+    2) Entrar a la conversión de Velocidad
+    3) Entrar a la conversión de Peso
+    4) Terminar el programa
+    """)
+    opcion = int(input("Elige una opción: "))
+    
+    if opcion == 1:
+        n1 = input('Ingrese los CM a convertir: ')
+        convertidor = Longitud(n1)
+        convertidor.pulgadas()
+        convertidor.yardas()
+        convertidor.pies()
+        convertidor.metros()
+    
+    elif opcion == 2:
+        n1 = input('Ingrese los KM a convertir: ')
+        acelerar = Velocidad(n1)
+        acelerar.millas()
+        acelerar.metros()
+        acelerar.nudos()
+        acelerar.pies()
+    
+    elif opcion == 3:
+        n1 = input('Ingrese los KG a convertir: ')
+        pesar = Peso(n1)
+        pesar.libras()
+        pesar.onzas()
+        pesar.toneladas()
+
+    elif opcion == 4:
+        print('Fin del programa.')
+        break
+    
+    else:
+        print("Opción incorrecta")
